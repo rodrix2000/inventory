@@ -16,9 +16,10 @@ development:
   adapter: postgresql
   encoding: unicode
   database: inventory_development
+  host: localhost
   pool: 5
   username: inventory
-  password:
+  password: inventorypassword
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -42,14 +43,17 @@ test:
   adapter: postgresql
   encoding: unicode
   database: inventory_test
+  host: localhost
   pool: 5
   username: inventory
-  password:
+  password: inventorypassword
 
 production:
   adapter: postgresql
   encoding: unicode
   database: inventory_production
+  host: localhost
   pool: 5
   username: inventory
-  password:
+  password: inventorypassword
+  
