@@ -1,9 +1,19 @@
 <% provide(:title, 'Home') %>
 
-
-    <h1>Sample App</h1>
-    <p>
+<div class="center hero-unit">
+    <h1>Welcome to the Inventory App</h1>
+    <h2>
       This is the home page for the Inventory app
     
-    </p>
+    </h2>
  
+ 
+
+ <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <li><%= link_to 'Products', products_path %></li> 
+          <li><%= link_to "Product Types", product_types_path %></li>
+        <% else %>
+         <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+        <% end %>
+</div>
