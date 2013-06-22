@@ -1,8 +1,7 @@
 class ProductTypesController < ApplicationController
   # GET /product_types
   # GET /product_types.json
-before_filter :authenticate_user!,  :except => :show
-    load_and_authorize_resource
+
   
   def index
     @product_types = ProductType.all

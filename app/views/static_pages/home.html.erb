@@ -6,14 +6,15 @@
       This is the home page for the Inventory app
     
     </h2>
- 
- 
+ <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+ </div>
 
  <% if user_signed_in? %>
+    <div class="center hero-unit">
           Logged in as <strong><%= current_user.email %></strong>.
           <li><%= link_to 'Products', products_path %></li> 
           <li><%= link_to "Product Types", product_types_path %></li>
         <% else %>
-         <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+         
         <% end %>
-</div>
+      </div>
