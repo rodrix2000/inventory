@@ -42,7 +42,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: inventory_test
+  database: inventory_development
   host: localhost
   pool: 5
   username: inventory

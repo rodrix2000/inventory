@@ -30,6 +30,15 @@ gem 'jquery-rails'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
+group :development, :test do
+  
+  gem 'rspec-rails'
+end
+
+group :test do
+   gem "factory_girl_rails"
+  gem 'capybara'
+end
 
 # Use unicorn as the app server
  gem 'unicorn'
